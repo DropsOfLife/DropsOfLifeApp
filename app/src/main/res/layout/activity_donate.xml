@@ -152,12 +152,14 @@
 
             <CheckBox
                 android:id="@+id/checkbox"
+                style="@android:style/Widget.DeviceDefault.CompoundButton.CheckBox"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:padding="8dp"
                 android:text="I am at least 18 years old and eligible to donate "
-                android:textColor="#fff" />
+                android:textColor="#fff"
+                android:buttonTint="@color/colorPrimary"/>
 
             <Button
                 android:id="@+id/button"
