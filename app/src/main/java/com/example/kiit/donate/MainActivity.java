@@ -27,7 +27,7 @@ import java.util.regex.Pattern;
 
 public class MainActivity extends AppCompatActivity {
 
-    ImageView bgapp, clover, donate, request;
+    ImageView bgapp, clover, donate, request,aboutus,contactus;
     LinearLayout textsplash, texthome, menus;
     Animation frombottom;
 
@@ -76,6 +76,8 @@ public class MainActivity extends AppCompatActivity {
 
         donate = (ImageView) findViewById(R.id.donate);
         request = (ImageView) findViewById(R.id.request);
+        aboutus = (ImageView) findViewById(R.id.about);
+        contactus = (ImageView) findViewById(R.id.contact);
         bgapp = (ImageView) findViewById(R.id.bgapp);
         //clover = (ImageView) findViewById(R.id.clover);
         textsplash = (LinearLayout) findViewById(R.id.textsplash);
@@ -114,6 +116,21 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this, request.class));
             }
         });
+
+        aboutus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, AboutUs.class));
+            }
+        });
+
+        contactus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, ContactUs.class));
+            }
+        });
+
     }
 
     class NotificationHandler implements  OneSignal.NotificationOpenedHandler{

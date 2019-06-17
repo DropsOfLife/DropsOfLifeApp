@@ -1,7 +1,6 @@
 <resources>
+
     <string name="app_name">Drops of Life</string>
-
-
     <array name="blood_groups">
         <item>None</item>
         <item>O+</item>
@@ -14,5 +13,8 @@
         <item>AB-</item>
     </array>
 
+    <string name="about_us_text">
+        Welcome to Drops of life. A free blood donation as well as request application developed by The Philanthropy Hand, social service wing of the non profit society called TPH. Drops of Life will help people in need of blood get connected with possible donors or blood banks nearest to them with only a few clicks. We at TPH, have generated a constantly updating database of blood donors of all blood groups so that connection during times of emergency is fast and hassle free. Name, blood group and PIN code are all the details required to let you get in touch with a donor and continue your treatment process. Drops of life will ensure a much higher chance of you receiving your needed units of blood in a much shorter time frame at no expenses, because everyone deserves an equal and fair chance at life.\n\t\tSimilarly, if you are kind enough, we also have the option of registering yourself in our database of donors, so that you can lend out a helping hand to someone in times of their need. We and every recipient will be forever grateful and thankful for your donation and allowing someone a second chance at their life.\n\nDo-nate!
+    </string>
 
 </resources>
