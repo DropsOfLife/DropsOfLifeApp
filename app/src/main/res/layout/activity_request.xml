@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/cardview_light_background"
+    android:orientation="vertical"
     android:paddingLeft="18dp"
-    android:paddingRight="18dp"
-    android:background="@drawable/new_login_gradients">
+    android:paddingRight="18dp">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -22,8 +22,8 @@
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginBottom="20dp"
                 android:layout_marginTop="48dp"
+                android:layout_marginBottom="20dp"
                 android:padding="16dp"
                 android:src="@drawable/clover" />
 
@@ -55,6 +55,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
                 android:background="@android:color/transparent"
+                android:drawableLeft="@drawable/pin_code_icon"
                 android:drawablePadding="12dp"
                 android:ems="10"
                 android:hint="Pin Code"
@@ -62,7 +63,8 @@
                 android:maxLength="6"
                 android:maxLines="1"
                 android:padding="8dp"
-                android:textColorHint="#fff" />
+                android:textColor="@color/browser_actions_text_color"
+                android:textColorHint="@color/browser_actions_title_color" />
 
             <View
                 android:layout_width="match_parent"
@@ -76,6 +78,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
                 android:background="@android:color/transparent"
+                android:drawableLeft="@drawable/black_phone_icon"
                 android:drawablePadding="12dp"
                 android:ems="10"
                 android:hint="Contact Number"
@@ -83,7 +86,8 @@
                 android:maxLength="10"
                 android:maxLines="1"
                 android:padding="8dp"
-                android:textColorHint="#fff" />
+                android:textColor="@color/browser_actions_text_color"
+                android:textColorHint="@color/browser_actions_title_color" />
 
             <View
                 android:layout_width="match_parent"
@@ -98,7 +102,8 @@
                 android:ems="10"
                 android:hint="Your location (eg. Apollo Hospital)"
                 android:inputType="textMultiLine"
-                android:textColorHint="#fff" />
+                android:textColor="@color/browser_actions_text_color"
+                android:textColorHint="@color/browser_actions_title_color" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -114,8 +119,8 @@
                     android:drawablePadding="12dp"
                     android:padding="8dp"
                     android:text="Select Blood Group:"
-                    android:textColor="#fff"
-                    android:textColorHint="#fff"
+                    android:textColor="@color/browser_actions_text_color"
+                    android:textColorHint="@color/browser_actions_title_color"
                     android:textSize="15sp" />
 
                 <Spinner
@@ -135,9 +140,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="50dp"
-                android:layout_marginRight="50dp"
                 android:layout_marginTop="28dp"
-                android:background="@drawable/background_submit"
+                android:layout_marginRight="50dp"
+                android:background="#EA2721"
                 android:clickable="true"
                 android:padding="15dp"
                 android:text="Find Donors"

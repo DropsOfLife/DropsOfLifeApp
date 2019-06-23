@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/cardview_light_background"
+    android:orientation="vertical"
     android:paddingLeft="18dp"
-    android:paddingRight="18dp"
-    android:background="@drawable/new_login_gradients">
+    android:paddingRight="18dp">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -23,8 +24,8 @@
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@android:dimen/app_icon_size"
                 android:layout_marginBottom="10dp"
-                android:layout_marginTop="2dp"
                 android:padding="14dp"
                 android:src="@drawable/clover" />
 
@@ -39,15 +40,15 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:alpha="0.9"
-                    android:fontFamily="cursive"
-                    android:text="Become a Donor!"
+                    android:fontFamily="sans-serif-thin"
+                    android:text="Become a donor"
                     android:textAlignment="center"
                     android:textAllCaps="false"
                     android:textColor="@android:color/holo_red_dark"
                     android:textSize="31sp"
                     android:textStyle="bold"
                     android:typeface="normal"
-                    tools:text="Become a Donor!" />
+                    tools:text="Become a donor" />
             </LinearLayout>
 
             <EditText
@@ -56,14 +57,15 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:background="@android:color/transparent"
-                android:drawableLeft="@drawable/ic_person_white_24dp"
+                android:drawableLeft="@drawable/ic_person_black_24dp"
                 android:drawablePadding="12dp"
                 android:ems="10"
-                android:hint="Full Name"
+                android:hint="Full name"
                 android:inputType="text"
                 android:maxLines="1"
                 android:padding="8dp"
-                android:textColorHint="#fff" />
+                android:textColor="@color/browser_actions_text_color"
+                android:textColorHint="@color/browser_actions_title_color" />
 
             <View
                 android:layout_width="match_parent"
@@ -76,7 +78,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
                 android:background="@android:color/transparent"
-                android:drawableLeft="@drawable/phone"
+                android:drawableLeft="@drawable/black_phone_icon"
                 android:drawablePadding="12dp"
                 android:ems="10"
                 android:hint="Mobile number"
@@ -84,7 +86,7 @@
                 android:maxLength="10"
                 android:maxLines="1"
                 android:padding="8dp"
-                android:textColorHint="#fff" />
+                android:textColorHint="@color/browser_actions_title_color" />
 
             <View
                 android:layout_width="match_parent"
@@ -97,14 +99,16 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
                 android:background="@android:color/transparent"
+                android:drawableLeft="@drawable/pin_code_icon"
                 android:drawablePadding="12dp"
                 android:ems="10"
-                android:hint="Pin Code"
+                android:hint="Pin code"
                 android:inputType="number"
                 android:maxLength="6"
                 android:maxLines="1"
                 android:padding="8dp"
-                android:textColorHint="#fff" />
+                android:textColor="@color/browser_actions_text_color"
+                android:textColorHint="@color/browser_actions_title_color" />
 
             <View
                 android:layout_width="match_parent"
@@ -116,50 +120,58 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
+                android:drawableLeft="@drawable/home"
                 android:ems="10"
-                android:hint="Your Address"
+                android:hint="Your address"
                 android:inputType="textMultiLine"
-                android:textColorHint="#fff" />
+                android:textColorHint="@color/browser_actions_title_color" />
 
-            <LinearLayout
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/linearLayout"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
+                android:layout_height="match_parent">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:id="@+id/textView10"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:layout_weight="1"
                     android:background="@android:color/transparent"
                     android:drawablePadding="12dp"
                     android:padding="8dp"
-                    android:text="Select Blood Group:"
-                    android:textColor="#fff"
+                    android:text="Select blood group:"
+                    android:textColor="@color/browser_actions_text_color"
                     android:textColorHint="#fff"
-                    android:textSize="15sp" />
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/spinner"
+                    app:layout_constraintStart_toStartOf="parent" />
 
                 <Spinner
                     android:id="@+id/spinner"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
                     android:entries="@array/blood_groups"
                     android:spinnerMode="dialog"
-                    android:visibility="visible" />
-            </LinearLayout>
+                    android:visibility="visible"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/textView10"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/textView10" />
+            </android.support.constraint.ConstraintLayout>
 
 
             <CheckBox
                 android:id="@+id/checkbox"
                 style="@android:style/Widget.DeviceDefault.CompoundButton.CheckBox"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="54dp"
                 android:layout_marginTop="8dp"
+                android:buttonTint="@color/colorPrimary"
                 android:padding="8dp"
                 android:text="I am at least 18 years old and eligible to donate "
-                android:textColor="#fff"
-                android:buttonTint="@color/colorPrimary"/>
+                android:textColor="@color/browser_actions_text_color"
+                android:textColorHighlight="@android:color/holo_red_dark"
+                android:textColorLink="@color/browser_actions_title_color"
+                android:textCursorDrawable="@color/browser_actions_text_color" />
 
             <Button
                 android:id="@+id/button"
@@ -167,15 +179,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="50dp"
-                android:layout_marginRight="50dp"
                 android:layout_marginTop="2dp"
-                android:background="@drawable/background_submit"
+                android:layout_marginRight="50dp"
+                android:background="#EA2721"
                 android:clickable="true"
                 android:padding="15dp"
                 android:text="Submit"
                 android:textAlignment="center"
                 android:textAllCaps="false"
-                android:textColor="#fff"
+                android:textColor="@color/cardview_light_background"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
