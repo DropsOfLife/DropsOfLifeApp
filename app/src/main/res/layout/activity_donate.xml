@@ -99,7 +99,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
                 android:background="@android:color/transparent"
-                android:drawableLeft="@drawable/pin_code_icon"
+                android:drawableLeft="@drawable/pin_code"
                 android:drawablePadding="12dp"
                 android:ems="10"
                 android:hint="Pin code"
@@ -119,12 +119,21 @@
                 android:id="@+id/addresss"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:drawableLeft="@drawable/home"
-                android:ems="10"
                 android:hint="Your address"
-                android:inputType="textMultiLine"
-                android:textColorHint="@color/browser_actions_title_color" />
+                android:layout_marginTop="4dp"
+                android:background="@android:color/transparent"
+                android:drawableLeft="@drawable/address"
+                android:drawablePadding="12dp"
+                android:ems="10"
+                android:padding="8dp"
+                android:textColor="@color/browser_actions_text_color"
+                android:textColorHint="@color/browser_actions_title_color"
+                 />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#f9d7db" />
+
 
             <android.support.constraint.ConstraintLayout
                 android:id="@+id/linearLayout"
