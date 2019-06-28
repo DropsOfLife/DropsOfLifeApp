@@ -60,7 +60,7 @@ jobs:
 
 workflows:
   version: 2
-  android-apk-test:
+  android-apk:
     jobs:
       - android:
           filters:  
